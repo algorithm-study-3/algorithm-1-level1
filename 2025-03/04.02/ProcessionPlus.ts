@@ -10,12 +10,5 @@ for (let i = 0; i < N; i++) {
     arr[i][j] = numberBoard[i][j] + numberBoard[i + N][j];
   }
 }
-let answer = "";
 
-for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[0].length; j++) {
-        answer += arr[i][j] + " ";
-    }
-    answer += "\n";
-}
-console.log(answer.trim());
+console.log(arr.map(lines => lines.join(" ")).join("\n"));
